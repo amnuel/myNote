@@ -15,13 +15,13 @@ export class NoteComponent implements OnInit {
 
     this.myNotes=this.myNotesservice.getNotes();
 
-    this.date=this.myNotes[0].date;
+    // this.date=this.myNotes[0].date;
     console.log(this.myNotes);
    }
    
   //  date:string =MyNotesService.date;
   ngOnInit(): void {
-    alert(this.myNotes);
+    // alert(this.myNotes);
   }
   openB(){
     // alert('good to go');

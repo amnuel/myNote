@@ -1,15 +1,23 @@
 <div class="jumbotron">
-  
-    <div class="card text-white bg-info " [(style)]="st">
-      <div class="card-header"> {{date}} </div>
+  <div class="row">
+    <div class="card text-white bg-info mr-5"*ngFor="let note of myNotes" [(style)]="st ">
+      <div class="card-header"> {{note.date}} </div>
       <div class="card-body">
-        <h5 class="card-title">Note Title </h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title">{{note.title}}</h5>
+        <p class="card-text">{{note.content}}</p>
         <button type="button"(click)="openB()" class="btn btn-success mr-5">Open</button>
         <button type="button" (click)="closeB()" class="btn btn-danger ml-5">close</button>
         
       </div>
     </div>
-  
+    <div class="card text-white bg-info mr-5" >
+      <div class="card-header"> </div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <div style="font-size: 24px;"><p class="card-text"> <i class="fas fa-sticky-note fa-10x"> </i></p></div>
+        
+        
+      </div>
+    </div>
   </div>
-  
+  </div>
